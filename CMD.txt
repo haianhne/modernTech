@@ -1,0 +1,15 @@
+pip install django
+django-admin startproject courseapp
+cd courseapp
+django-admin startapp course
+python manage.py runserver #chay app
+pip install pymysql
+python manage.py makemigrations course
+python manage.py sqlmigrate course 0001
+python manage.py migrate
+python manage.py shell
+	from course.models import * 
+	Category.objects.create(name="Cong Nghe Phan Mem")
+	Category.objects.create(name="Cong Nghe Opensource") 
+
+python manage.py createsuperuser  #tao_user_cho_admin
